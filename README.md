@@ -359,6 +359,7 @@
             transition: var(--transition-medium);
             position: relative;
             overflow: hidden;
+            z-index: 10000;
         }
         
         .mobile-menu-btn::before {
@@ -398,7 +399,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px 100px;
+            margin-top: 0;
         }
         
         /* HERO IMAGE BACKGROUND */
@@ -437,7 +439,7 @@
             max-width: 800px;
             position: relative;
             z-index: 1;
-            padding: 50px;
+            padding: 40px 30px;
             background-color: rgba(10, 14, 42, 0.7);
             backdrop-filter: blur(20px);
             border: 2px solid var(--aqua-blue);
@@ -446,6 +448,8 @@
                 var(--glow-blue),
                 0 25px 70px rgba(0, 0, 0, 0.8);
             animation: contentScan 6s ease-in-out infinite;
+            width: 100%;
+            margin: 0 20px;
         }
         
         @keyframes contentScan {
@@ -464,12 +468,13 @@
         }
         
         .hero h1 {
-            font-size: 5.5rem;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
             margin-bottom: 25px;
-            letter-spacing: 5px;
+            letter-spacing: clamp(2px, 1vw, 5px);
             animation: 
                 heroTechPulse 4s ease-in-out infinite,
                 heroDigital 8s ease-in-out infinite;
+            line-height: 1.1;
         }
         
         @keyframes heroTechPulse {
@@ -499,7 +504,7 @@
         
         .hero p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             color: var(--text-light);
             margin-bottom: 40px;
             line-height: 1.8;
@@ -525,12 +530,12 @@
             display: inline-block;
             background: linear-gradient(45deg, var(--neon-orange), var(--electric-blue));
             color: var(--text-white);
-            padding: 20px 45px;
+            padding: 18px 35px;
             border-radius: 0;
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            font-size: 16px;
+            font-size: clamp(14px, 2vw, 16px);
             text-transform: uppercase;
             letter-spacing: 3px;
             border: 2px solid var(--neon-orange);
@@ -581,12 +586,12 @@
             display: inline-block;
             background-color: transparent;
             color: var(--aqua-blue);
-            padding: 18px 40px;
+            padding: 16px 30px;
             border-radius: 0;
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            font-size: 15px;
+            font-size: clamp(13px, 1.8vw, 15px);
             text-transform: uppercase;
             letter-spacing: 3px;
             border: 2px solid var(--aqua-blue);
@@ -635,8 +640,8 @@
         /* SECTION TITLES - TECH STYLE WITH ORIGINAL COLORS */
         .section-title {
             text-align: center;
-            margin: 100px 0 60px;
-            font-size: 4rem;
+            margin: 80px 0 50px;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             position: relative;
             padding-bottom: 25px;
             animation: 
@@ -714,9 +719,9 @@
         .products-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 30px;
             max-width: 1400px;
-            margin: 0 auto 100px;
+            margin: 0 auto 80px;
             padding: 0 20px;
         }
         
@@ -798,7 +803,7 @@
         
         .product-img {
             width: 100%;
-            height: 320px;
+            height: 280px;
             object-fit: cover;
             transition: var(--transition-medium);
             filter: grayscale(0.3) contrast(1.2);
@@ -839,7 +844,7 @@
         }
         
         .product-info {
-            padding: 35px;
+            padding: 25px;
             position: relative;
             background-color: var(--navy-card);
             border-top: 2px solid var(--navy-border);
@@ -847,7 +852,7 @@
         
         .product-name {
             font-family: 'Audiowide', 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--aqua-blue);
             text-shadow: var(--glow-aqua);
@@ -867,15 +872,15 @@
         
         .product-desc {
             color: var(--text-light);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             line-height: 1.7;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-family: 'Share Tech Mono', monospace;
         }
         
         /* ABOUT SECTION - TECH STYLE WITH ORIGINAL COLORS */
         .about {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background-color: var(--dark-navy);
             border-top: 2px solid var(--navy-border);
             border-bottom: 2px solid var(--navy-border);
@@ -915,7 +920,7 @@
         .about-content {
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 40px;
             max-width: 1400px;
             margin: 0 auto;
             align-items: center;
@@ -929,7 +934,7 @@
         
         .about-img {
             flex: 1;
-            min-height: 450px;
+            min-height: 350px;
             background-image: url('https://i.postimg.cc/LX8dfbLS/IMG_7106.jpg');
             background-size: cover;
             background-position: center;
@@ -970,12 +975,12 @@
         
         .about-text {
             flex: 1;
-            padding: 30px;
+            padding: 20px;
         }
         
         .about-text h2 {
-            font-size: 3.2rem;
-            margin-bottom: 35px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 25px;
             color: var(--neon-orange);
             animation: 
                 aboutTitleTech 7s ease-in-out infinite,
@@ -1007,11 +1012,11 @@
         
         .about-text p {
             color: var(--text-light);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             line-height: 1.8;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-family: 'Share Tech Mono', monospace;
-            padding: 25px;
+            padding: 20px;
             background-color: rgba(26, 31, 68, 0.5);
             border-left: 3px solid var(--aqua-blue);
             transition: var(--transition-medium);
@@ -1029,7 +1034,7 @@
         
         /* VALUES CARDS - TECH STYLE WITH ORIGINAL COLORS */
         .values {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background-color: var(--deep-navy);
             position: relative;
         }
@@ -1037,7 +1042,7 @@
         .values-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 25px;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -1057,7 +1062,7 @@
         .value-card {
             background-color: var(--navy-card);
             border: 2px solid var(--navy-border);
-            padding: 45px 30px;
+            padding: 35px 25px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -1110,8 +1115,8 @@
         }
         
         .value-icon {
-            font-size: 3.5rem;
-            margin-bottom: 25px;
+            font-size: 3rem;
+            margin-bottom: 20px;
             color: var(--neon-orange);
             text-shadow: var(--glow-orange);
             transition: var(--transition-medium);
@@ -1147,8 +1152,8 @@
         
         .value-card h3 {
             font-family: 'Audiowide', 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
             color: var(--aqua-blue);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -1166,14 +1171,14 @@
         
         .value-card p {
             color: var(--text-light);
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             font-family: 'Share Tech Mono', monospace;
         }
         
         /* GALLERY SECTION - TECH STYLE WITH ORIGINAL COLORS */
         .gallery-section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background-color: var(--dark-navy);
             border-top: 2px solid var(--navy-border);
             position: relative;
@@ -1182,7 +1187,7 @@
         
         .slide-gallery {
             max-width: 1400px;
-            margin: 60px auto 0;
+            margin: 50px auto 0;
             border: 2px solid var(--electric-blue);
             border-radius: 0;
             overflow: hidden;
@@ -1209,18 +1214,18 @@
         .slides-container {
             display: flex;
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            height: 550px;
+            height: 400px;
         }
         
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             .slides-container {
-                height: 400px;
+                height: 500px;
             }
         }
         
-        @media (max-width: 480px) {
+        @media (min-width: 1024px) {
             .slides-container {
-                height: 300px;
+                height: 550px;
             }
         }
         
@@ -1249,9 +1254,9 @@
             right: 0;
             background-color: rgba(10, 14, 42, 0.9);
             color: var(--text-white);
-            padding: 25px;
+            padding: 20px;
             font-family: 'Audiowide', 'Orbitron', sans-serif;
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 3vw, 1.4rem);
             text-transform: uppercase;
             letter-spacing: 3px;
             text-align: center;
@@ -1280,23 +1285,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
         }
         
         .prev-btn, .next-btn {
-            width: 65px;
-            height: 65px;
+            width: 55px;
+            height: 55px;
             border: 2px solid var(--aqua-blue);
             background-color: transparent;
             color: var(--aqua-blue);
             border-radius: 0;
             cursor: pointer;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             transition: var(--transition-medium);
             position: relative;
             overflow: hidden;
             animation: controlTech 5s ease-in-out infinite;
+            flex-shrink: 0;
         }
         
         @keyframes controlTech {
@@ -1348,12 +1355,14 @@
         
         .gallery-dots {
             display: flex;
-            gap: 15px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
         .dot {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border: 2px solid var(--aqua-blue);
             border-radius: 0;
             cursor: pointer;
@@ -1362,6 +1371,7 @@
             background-color: transparent;
             transform: rotate(45deg);
             animation: dotTech 4s ease-in-out infinite;
+            flex-shrink: 0;
         }
         
         @keyframes dotTech {
@@ -1433,7 +1443,7 @@
         footer {
             background-color: var(--deep-navy);
             border-top: 3px solid var(--neon-orange);
-            padding: 80px 20px 30px;
+            padding: 60px 20px 25px;
             position: relative;
             overflow: hidden;
         }
@@ -1471,7 +1481,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 50px;
+            gap: 40px;
             position: relative;
             z-index: 1;
         }
@@ -1484,10 +1494,10 @@
         
         .footer-logo {
             font-family: 'Wallpoet', 'Audiowide', sans-serif;
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 5vw, 2.5rem);
             font-weight: 900;
             color: var(--neon-orange);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: var(--glow-orange);
             animation: 
                 footerLogoTech 7s ease-in-out infinite,
@@ -1521,12 +1531,12 @@
         
         .footer-section h3 {
             font-family: 'Audiowide', 'Orbitron', sans-serif;
-            font-size: 1.6rem;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
             color: var(--aqua-blue);
             text-transform: uppercase;
-            letter-spacing: 3px;
-            padding-bottom: 15px;
+            letter-spacing: 2px;
+            padding-bottom: 12px;
             border-bottom: 2px solid var(--navy-border);
             animation: footerTitleTech 6s ease-in-out infinite;
         }
@@ -1545,24 +1555,26 @@
         
         .social-icons {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 25px;
+            flex-wrap: wrap;
         }
         
         .social-icons a {
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             border: 2px solid var(--aqua-blue);
             border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--aqua-blue);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             transition: var(--transition-medium);
             position: relative;
             overflow: hidden;
             animation: socialTech 5s ease-in-out infinite;
+            flex-shrink: 0;
         }
         
         @keyframes socialTech {
@@ -1617,16 +1629,16 @@
         }
         
         .footer-links li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
             color: var(--text-light);
             text-decoration: none;
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             transition: var(--transition-fast);
             display: inline-block;
             padding: 5px 0;
@@ -1675,7 +1687,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: var(--text-light);
             font-family: 'Share Tech Mono', monospace;
         }
@@ -1683,7 +1695,7 @@
         .contact-info i {
             color: var(--neon-orange);
             width: 25px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             text-shadow: var(--glow-orange);
             animation: contactIconTech 6s ease-in-out infinite;
         }
@@ -1705,11 +1717,11 @@
         
         .copyright {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 50px;
             padding-top: 25px;
             border-top: 2px solid var(--navy-border);
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.9rem;
             letter-spacing: 2px;
             font-family: 'Share Tech Mono', monospace;
             animation: copyrightTech 8s ease-in-out infinite;
@@ -1757,18 +1769,6 @@
         
         /* MOBILE RESPONSIVE */
         @media (max-width: 1023px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 3rem;
-            }
-            
             nav ul {
                 display: none;
                 position: fixed;
@@ -1784,56 +1784,154 @@
                 z-index: 9998;
                 padding: 80px 20px;
                 border: 2px solid var(--neon-orange);
+                gap: 30px;
             }
             
             nav ul.active {
                 display: flex;
             }
             
+            nav a::after {
+                display: none;
+            }
+            
+            nav a {
+                font-size: 18px;
+                padding: 15px 0;
+            }
+            
             .mobile-menu-btn {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                z-index: 9999;
+            }
+            
+            .hero-content {
+                padding: 30px 20px;
+            }
+            
+            .logo-text {
+                font-size: 24px;
+            }
+            
+            .logo-subtitle {
+                font-size: 8px;
+            }
+            
+            .section-title::before {
+                width: 200px;
+            }
+            
+            .section-title::after {
+                width: 100px;
+            }
+            
+            .about-content {
+                gap: 30px;
+            }
+            
+            .about-img {
+                min-height: 300px;
             }
         }
         
         @media (max-width: 767px) {
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
-            .hero-content {
-                padding: 30px;
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .btn {
-                padding: 18px 35px;
+                padding: 16px 30px;
                 font-size: 14px;
             }
             
+            .btn-outline {
+                padding: 14px 25px;
+                font-size: 13px;
+            }
+            
             .section-title {
-                font-size: 2.3rem;
+                font-size: 2.2rem;
+                margin: 60px 0 40px;
+            }
+            
+            .products-grid {
+                gap: 25px;
+            }
+            
+            .product-card, .value-card {
+                padding: 20px;
+            }
+            
+            .product-img {
+                height: 250px;
+            }
+            
+            .slide-caption {
+                padding: 15px;
+                font-size: 1rem;
+            }
+            
+            .prev-btn, .next-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+            
+            .gallery-controls {
+                gap: 15px;
+            }
+            
+            .footer-content {
+                gap: 30px;
             }
         }
         
         @media (max-width: 480px) {
+            .hero {
+                padding: 100px 20px 80px;
+            }
+            
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
             }
             
             .section-title {
                 font-size: 1.8rem;
             }
             
-            .products-grid,
-            .values-grid {
-                gap: 25px;
+            .product-name {
+                font-size: 1.3rem;
             }
             
-            .product-card,
-            .value-card {
-                padding: 25px;
+            .value-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .value-icon {
+                font-size: 2.5rem;
+            }
+            
+            .footer-logo {
+                font-size: 1.8rem;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .social-icons a {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
             }
         }
         
@@ -1867,9 +1965,16 @@
         }
         
         .cyber-loader {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             position: relative;
+        }
+        
+        @media (min-width: 768px) {
+            .cyber-loader {
+                width: 80px;
+                height: 80px;
+            }
         }
         
         .cyber-loader div {
@@ -1906,15 +2011,24 @@
         }
         
         .loading-text {
-            margin-top: 25px;
+            margin-top: 20px;
             color: var(--aqua-blue);
             font-family: 'Share Tech Mono', monospace;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 1.2rem;
+            letter-spacing: 3px;
+            font-size: 1rem;
             animation: 
                 loadingTech 2s steps(1, end) infinite,
                 loadingColorTech 4s ease-in-out infinite;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .loading-text {
+                font-size: 1.2rem;
+                letter-spacing: 4px;
+            }
         }
         
         @keyframes loadingTech {
@@ -2071,7 +2185,7 @@
                     <p>Every bar is made by hand in small batches for quality and attention to detail.</p>
                 </div>
                 
-                .value-card {
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-palette"></i>
                     </div>
@@ -2206,7 +2320,7 @@
     
     <script>
         // ====================
-        // ULTRA TECH SCRIPT
+        // ULTRA TECH SCRIPT - FIXED
         // ====================
         
         // DOM Ready
@@ -2214,22 +2328,43 @@
             // Hide loading screen
             setTimeout(() => {
                 const loading = document.getElementById('loading');
-                loading.style.opacity = '0';
-                setTimeout(() => {
-                    loading.style.display = 'none';
-                }, 600);
+                if (loading) {
+                    loading.style.opacity = '0';
+                    setTimeout(() => {
+                        loading.style.display = 'none';
+                    }, 600);
+                }
             }, 1500);
             
             // Initialize components
             initMobileMenu();
             initSmoothScroll();
             initGallery();
-            initAnimations();
             initScrollEffects();
             initTechEffects();
+            
+            // Fix any visible code
+            fixVisibleCode();
         });
         
-        // MOBILE MENU
+        // FIX VISIBLE CODE ISSUE
+        function fixVisibleCode() {
+            // Check for any stray code elements
+            const allElements = document.querySelectorAll('*');
+            allElements.forEach(element => {
+                if (element.textContent && element.textContent.includes('.value-card {')) {
+                    element.style.display = 'none';
+                }
+            });
+            
+            // Make sure only proper elements are visible
+            document.querySelectorAll('.value-card').forEach(card => {
+                card.style.display = 'block';
+                card.innerHTML = card.innerHTML.replace(/\.value-card\s*{/g, '');
+            });
+        }
+        
+        // MOBILE MENU - FIXED
         function initMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navMenu = document.getElementById('navMenu');
@@ -2270,28 +2405,65 @@
                     }
                 });
             });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.style.borderColor = 'var(--aqua-blue)';
+                        mobileMenuBtn.style.color = 'var(--aqua-blue)';
+                    }
+                }
+            });
         }
         
-        // SMOOTH SCROLL
+        // SMOOTH SCROLL - FIXED
         function initSmoothScroll() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
+                    if (targetId === '#' || !targetId) return;
                     
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80,
+                            top: targetPosition - headerHeight,
                             behavior: 'smooth'
                         });
+                        
+                        // Close mobile menu if open
+                        const navMenu = document.getElementById('navMenu');
+                        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                        const icon = mobileMenuBtn ? mobileMenuBtn.querySelector('i') : null;
+                        
+                        if (navMenu && navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            document.body.style.overflow = 'auto';
+                            if (icon) {
+                                icon.classList.remove('fa-times');
+                                icon.classList.add('fa-bars');
+                            }
+                            if (mobileMenuBtn) {
+                                mobileMenuBtn.style.borderColor = 'var(--aqua-blue)';
+                                mobileMenuBtn.style.color = 'var(--aqua-blue)';
+                            }
+                        }
                     }
                 });
             });
         }
         
-        // GALLERY
+        // GALLERY - FIXED
         function initGallery() {
             const slidesContainer = document.getElementById('slidesContainer');
             const prevBtn = document.getElementById('prevBtn');
@@ -2308,6 +2480,7 @@
             if (totalSlides === 0) return;
             
             let autoSlideInterval;
+            let isTransitioning = false;
             
             // Create dots
             galleryDots.innerHTML = '';
@@ -2315,6 +2488,7 @@
                 const dot = document.createElement('button');
                 dot.classList.add('dot');
                 dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.setAttribute('type', 'button');
                 if (i === 0) dot.classList.add('active');
                 dot.addEventListener('click', () => goToSlide(i));
                 galleryDots.appendChild(dot);
@@ -2322,6 +2496,10 @@
             
             // Go to slide function
             function goToSlide(slideIndex) {
+                if (isTransitioning || slideIndex === currentSlide) return;
+                
+                isTransitioning = true;
+                
                 if (slideIndex < 0) slideIndex = totalSlides - 1;
                 if (slideIndex >= totalSlides) slideIndex = 0;
                 
@@ -2335,11 +2513,17 @@
                 
                 // Reset auto slide timer
                 resetAutoSlide();
+                
+                // Allow next transition after animation completes
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 600);
             }
             
             // Navigation
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
+                    if (isTransitioning) return;
                     goToSlide(currentSlide - 1);
                     // Button effect
                     prevBtn.style.animation = 'controlHoverTech 0.4s steps(1, end)';
@@ -2351,6 +2535,7 @@
             
             if (nextBtn) {
                 nextBtn.addEventListener('click', () => {
+                    if (isTransitioning) return;
                     goToSlide(currentSlide + 1);
                     // Button effect
                     nextBtn.style.animation = 'controlHoverTech 0.4s steps(1, end)';
@@ -2364,7 +2549,9 @@
             function startAutoSlide() {
                 if (totalSlides > 1) {
                     autoSlideInterval = setInterval(() => {
-                        goToSlide(currentSlide + 1);
+                        if (!isTransitioning) {
+                            goToSlide(currentSlide + 1);
+                        }
                     }, 5000);
                 }
             }
@@ -2379,60 +2566,59 @@
             if (gallery && totalSlides > 1) {
                 gallery.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
                 gallery.addEventListener('mouseleave', startAutoSlide);
+                
+                // Also pause on touch devices
+                gallery.addEventListener('touchstart', () => clearInterval(autoSlideInterval));
+                gallery.addEventListener('touchend', () => setTimeout(startAutoSlide, 3000));
             }
             
             // Start auto slide
             startAutoSlide();
-        }
-        
-        // ANIMATIONS
-        function initAnimations() {
-            // Scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        
-                        // Add effect when element comes into view
-                        if (entry.target.classList.contains('product-card') || 
-                            entry.target.classList.contains('value-card')) {
-                            entry.target.style.animation = 'cardHoverTech 0.5s steps(1, end)';
-                            setTimeout(() => {
-                                entry.target.style.animation = '';
-                            }, 500);
-                        }
+            
+            // Make gallery dots keyboard accessible
+            galleryDots.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        goToSlide(index);
                     }
                 });
-            }, { threshold: 0.1 });
-            
-            // Observe elements
-            document.querySelectorAll('.product-card, .value-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
             });
         }
         
-        // SCROLL EFFECTS
+        // SCROLL EFFECTS - FIXED
         function initScrollEffects() {
+            let ticking = false;
+            const header = document.querySelector('header');
+            
+            if (!header) return;
+            
             window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const header = document.querySelector('header');
-                
-                if (scrolled > 100) {
-                    header.style.backgroundColor = 'rgba(10, 14, 42, 0.98)';
-                    header.style.backdropFilter = 'blur(20px)';
-                } else {
-                    header.style.backgroundColor = 'rgba(10, 14, 42, 0.95)';
-                    header.style.backdropFilter = 'blur(15px)';
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrolled = window.pageYOffset;
+                        
+                        if (scrolled > 100) {
+                            header.style.backgroundColor = 'rgba(10, 14, 42, 0.98)';
+                            header.style.backdropFilter = 'blur(20px)';
+                        } else {
+                            header.style.backgroundColor = 'rgba(10, 14, 42, 0.95)';
+                            header.style.backdropFilter = 'blur(15px)';
+                        }
+                        
+                        ticking = false;
+                    });
+                    
+                    ticking = true;
                 }
             });
         }
         
-        // TECH EFFECTS
+        // TECH EFFECTS - OPTIMIZED FOR MOBILE
         function initTechEffects() {
+            // Only run heavy animations if not on mobile
+            if (window.innerWidth < 768) return;
+            
             // Random tech effect on logo
             setInterval(() => {
                 const logo = document.querySelector('.logo-text');
@@ -2490,6 +2676,18 @@
                 }
             }, Math.random() * 6000 + 4000); // 4-10 seconds
         }
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            // Re-initialize gallery if needed
+            const galleryDots = document.getElementById('galleryDots');
+            if (galleryDots && galleryDots.children.length === 0) {
+                initGallery();
+            }
+        });
+        
+        // Improve mobile touch interactions
+        document.addEventListener('touchstart', function() {}, {passive: true});
     </script>
 </body>
 </html>
